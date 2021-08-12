@@ -14,7 +14,7 @@
     }*/
   
  .overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -226,21 +226,26 @@
   @media (min-width: 1024px) {
 
     header {
+        display: flex;
         width:95%;
-        height:190px;
-        margin:10px auto;
+        margin:30px auto;
         text-align: center;
       }
 
       h1 {
+        width:80%;
+        font-size: 1.2em;
         background-color: #fff;
         color:rgb(29, 28, 28);
         text-align: left;
+        margin-top:40px;
       }
 
       input{
-        margin-top:5px ;
-        margin-right:15px;
+        width:15%;
+        margin-top:80px;
+        margin-right:5px;
+        text-align: right;
 
       }
 

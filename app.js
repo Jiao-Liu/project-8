@@ -114,24 +114,45 @@ employeeSearch.addEventListener("keyup", function(e){
 });
 
 
+
 //Preview and Next
-leftArrow.addEventListener("click", () => {
+leftArrow.addEventListener("click", (e) => {
     const modalInfo = document.querySelector(".modalInfo");
     const index = modalInfo.getAttribute("dataInd");
     const prevIndex = parseInt(index) - 1;
-    if (index > 0) {
+    const currentIndex=[];
+    currentIndex.push(index);
+
+    
+    if (currentIndex > 0) {
+      currentIndex.length --;
       displayModal(prevIndex);
+   
+    }else if(currentIndex == 0){
+          currentIndex.length=11;
+          displayModal(currentIndex.length);
     }
+  
+  
 });
 
-rightArrow.addEventListener("click", () => {
+rightArrow.addEventListener("click", (e) => {
     const modalInfo = document.querySelector(".modalInfo");
     const index = modalInfo.getAttribute("dataInd");
     const nextIndex = parseInt(index) + 1;
-    if (index < 12) {
-      displayModal(nextIndex);
-    }
-});
+    const currentIndex=[];
+    currentIndex.push(index);
 
+
+    if (currentIndex <11) {
+      currentIndex.length ++;
+      displayModal(nextIndex);
+
+    }else if(currentIndex == 11){
+        currentIndex.length =0;
+        displayModal(currentIndex.length);
+    }
+ 
+});
 
 
